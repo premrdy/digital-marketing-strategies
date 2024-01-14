@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital marketing </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('C:\Users\swaya\Downloads\digiii.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+           
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 140px);
+        }
+
+        #logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Digital Marketing Strategies</h1>
+    </header>
+    <main>
+        <img id="logo" src="C:\Users\swaya\Downloads\logoo.jpeg" alt="Logo">
+        <p>Welcome to our digital marketing strategies </p>
+        
+        <button onclick="redirectToSignIn()">Sign In</button>
+        <button onclick="redirectToSignUp()">Sign Up</button>
+    </main>
+
+    <script>
+        function redirectToSignIn() {
+            window.location.href = 'signin.html';
+        }
+
+        function redirectToSignUp() {
+            window.location.href = 'signup.html';
+        }
+    </script>
+</body>
+</html>
