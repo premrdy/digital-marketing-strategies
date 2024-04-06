@@ -1,0 +1,249 @@
+1.	Write a code to get 2 integers as input and add the integers without any carry.
+Input Description:
+A single line containing 2 integers.
+Output Description:
+Print sum of the 2 integers without carry
+Sample Input :
+44 66
+Sample Output :
+0
+
+2.	Write a code to get 2 integers A and N. Print the integer A, N times in separate line.
+Input Description:
+First line contains an integer A. Second line contains an Integer N.
+Output Description:
+Print the integer A, N times in a separate line.
+Sample Input :
+2 3
+Sample Output :
+2
+2
+2
+
+import java.util.Scanner;
+
+public class AddWithoutCarry {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input
+
+        int A = scanner.nextInt();
+        int N = scanner.nextInt();
+        for(int i=1;i<=N;i++){
+            System.out.println(A);
+        }
+        
+        
+    }
+}
+
+
+3.	Write a code get an integer number as input and print the odd and even digits of the number separately.
+Input Description:
+A single line containing an integer.
+Output Description:
+Print the even and odd integers of the integer in a separate line.
+Sample Input :
+1234
+Sample Output :
+2 4
+1 3
+import java.util.Scanner;
+
+public class nnb {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+
+        // Taking input
+        int n=sc.nextInt();
+        int a[]=new int[5];
+        int b[]=new int[5];
+        int aa=0;
+        int bb=0;
+        String str=Integer.toString(n);
+        for(int i=0;i<str.length();i++){
+            int ch=Character.getNumericValue(str.charAt(i));
+            if(ch%2==0){
+                a[aa++]=ch;
+            }
+            else{
+                b[bb++]=ch;
+            }
+        }
+        for(int i=0;i<aa;i++){
+            System.out.print(a[i]+ " ");
+        }
+        System.out.println();
+        for(int j=0;j<bb;j++){
+            System.out.print(b[j]+ " ");
+        }
+        
+
+        // Output
+        
+    }
+}
+
+
+
+4.	Write a code get an integer number as input and print the sum of the digits.
+Input Description:
+A single line containing an integer.
+Output Description:
+Print the sum of the digits of the integer.
+Sample Input :
+124
+Sample Output :
+7
+import java.util.Scanner;
+
+public class AddWithoutCarry {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input
+
+        int N = scanner.nextInt();
+        int sum=0;
+        while(N>0){
+            int r=N%10;
+            sum=sum+r;
+            N=N/10;
+
+        }
+        System.out.println(sum);
+
+    }
+}
+
+
+5.	 Write a code to get 2 integers as input and find the HCF of the 2 integer without using recursion or Euclidean algorithm.
+Input Description:
+A single line containing 2 integers separated by space.
+Output Description:
+Print the HCF of the integers.
+Sample Input :
+2 3
+Sample Output :
+1
+
+import java.util.Scanner;
+
+public class AddWithoutCarry {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input
+
+        int n = scanner.nextInt();
+        int nn=scanner.nextInt();
+        
+        for(int i=1;i<=n&&i<=nn;i++)
+        if(n%i==0 && nn%i==0)
+        System.out.println(i);
+            
+            
+         }
+        
+    }
+
+6.	You are given with an array containing only 1s and 0s.You can select two index ‘a’ and ‘b’ such that a<b in which you will change ‘1 to 0’ and ‘0 to 1’,in order to get maximum no of 1s in result.
+Input Description:
+You are given with array of 1’s and 0’s
+Output Description:
+Print the two index ‘a’ and ‘b‘.Print -1 if we don’t require a and b
+Sample Input :
+1111100
+Sample Output :
+5 7
+
+7.	
+
+You are given a number ‘n’,count the number of 1’s in its binary string.of that number
+Input Description:
+You are given with the number ‘n’.
+Output Description:
+Count the number of 1 in string
+Sample Input :
+4
+Sample Output :
+1
+import java.util.Scanner;
+
+public class AddWithoutCarry {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input
+
+        int n = scanner.nextInt();
+        String str=Integer.toBinaryString(n);
+        char ch;
+        int count=0;
+        for(int i=0;i<str.length();i++){
+            ch=str.charAt(i);
+            if(ch=='1'){
+                count++;
+            }
+            
+
+        }
+        System.out.println(count);
+
+        }
+        
+    }
+
+
+
+
+8.	
+ You are given an integer ‘n’,You have to shift all the even bits with odd bits and odd bits with even bits, and print the number which is formed after manipulation in O(1) time complexity
+Input Description:
+You are given a number ‘n’
+Output Description:
+Print the bit manipulated number
+Sample Input :
+23
+Sample Output :
+43
+
+9 
+You are given a number ‘n’.Your task is to set all the bits to 1 in the position of range [L R] and then print the  new number. Bit count start from 1 and it starts from left
+
+Input Description:
+You are given a number N, L and R seperated by single space
+Output Description:
+Print the new number created by setting the bits of the given number to 1 in the range of L to R
+Sample Input :
+17 2 3
+Sample Output :
+23
+
+
+ 10 . You are given a number ‘n’ you have to tell whether number is divisible by 8.
+Print 1 if it is divisible and 0 if it is not.
+Input Description:
+You are given a number ‘n’.
+Output Description:
+Print 1 if number is divisible by 8 and 0 if not
+Sample Input :
+16
+Sample Output :
+1
+import java.util.Scanner;
+
+public class AddWithoutCarry {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input
+
+        int N = scanner.nextInt();
+        int out=N%8==0?1:0;
+        System.out.println(out);
+    }
+}
+
