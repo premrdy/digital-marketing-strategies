@@ -1,0 +1,218 @@
+1.	Given a string S of length N, reverse the words at odd positions.
+Input Size: 1 <= N <= 100000
+Sample Testcase :
+INPUT
+This is an example for this question
+OUTPUT
+sihT is na example rof this noitseuq
+
+public class striprac{
+    public static void main(String[] args) {
+        String str="This is an example for this equation";
+        String strr[]=str.split("\\s+");
+        for(int i=0;i<strr.length;i++){
+            if(i%2!=0){
+            strr[i]=new StringBuffer(strr[i]).reverse().toString();
+            
+            
+            }
+        }
+        String out=String.join(" ",strr);
+        System.out.println(out);
+        
+    
+  
+}
+}
+
+2.	Given a sentence S.check whether it is in camelcase.print 'yes' if it is in camelcase otherwise print 'no'.
+input size : |s| <= 100000
+Sample Testcase :
+INPUT
+WelcomeAll
+OUTPUT
+yes
+
+3.	Given a number N followed by N numbers. Find the largest number which can be formed from the given numbers and print it.
+NOTE: Each number should be used exactly once.
+Input Size : 1 <= N <= 100000
+Sample Testcases :
+INPUT
+5
+5 6 7 8 9
+OUTPUT
+98765
+mport java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class striprac {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int N = sc.nextInt();
+        int[] numbers = new int[N];
+
+        // Input numbers
+        for (int i = 0; i < N; i++) {
+            numbers[i] = sc.nextInt();
+        }
+        int num=numbers[N-1];
+        Arrays.sort(numbers);
+        reverse(numbers);
+        String[] a=new String[N];
+        
+        for(int i=0;i<N;i++){
+            a[i]=Integer.toString(numbers[i]);
+        }
+        for(int i=0;i<N;i++){
+            System.out.print(a[i]);
+        }
+            
+        }
+
+    private static void reverse(int[] numbers) {
+        int n=numbers.length;
+        for(int i=0;i<n/2;i++){
+            int temp=numbers[i];
+            numbers[i]=numbers[n-i-1];
+            numbers[n-i-1]=temp;
+        }
+    }
+}
+    
+
+4.	Given two numbers S1 and S2 represented as strings, return multiplication of the numbers as a string.
+NOTE: The numbers can be arbitrarily large and are nonnegative.
+Sample Testcase :
+INPUT
+2 10
+OUTPUT
+20
+import java.util.Scanner;
+
+public class striprac{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String S1=sc.next();
+        String S2=sc.next();
+        int a=Integer.parseInt(S1);
+        int b=Integer.parseInt(S2);
+        System.out.println(a*b);
+
+    }
+}
+5.	Given with Size of the array 'N' followed by array of 'N' strings, group the anagrams and print the number of grouping possible.If grouping not possible print '0'.
+Sample Testcase :
+INPUT
+7
+rat art cat act dog god tar pat
+OUTPUT
+3
+[rat, art, tar],[cat, act],[dog, god]
+
+
+
+
+
+ 6.	Given a string S and a number K. Print all the substrings of S of length K(space separeted output).
+Input Size : |S| <= 100 and K<= 50
+Sample Testcase :
+INPUT
+prog2
+OUTPUT
+pr ro og
+
+import java.util.Scanner;
+
+public class striprac{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        int n=sc.nextInt();
+        for(int i=0;i<=n;i++){
+            
+            System.out.print(str.substring(i,i+n)+" ");
+            
+        }
+        
+
+        
+    }
+}
+    
+
+
+7.	Given 2 strings S1 and S2. Find if String2 is substring of String1. If it is print the index of the first occurrence. else print -1.
+Input Size : 1<= N <= 100000
+Sample Testcases :
+1)INPUT
+test123string
+
+123
+OUTPUT
+4
+mport java.util.Scanner;
+
+public class striprac{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.next();
+        String str2=sc.next();
+        
+        int index=str1.indexOf(str2);
+        if(index!=-1){
+        System.out.println(index);
+        }
+        else{
+            System.out.println(-1);
+        }
+       
+
+
+
+    }
+}
+
+
+8.	Write a program to give the following output for the given string S of size N.(character containing even number of occurences should be elaborated else print the same format)
+Eg 1: Input: a1b10
+Output: a1bbbbbbbbbb
+Eg: 2: Input: b3c6d15
+Output: b3ccccccd15
+Input Size : 1 <= N <= 100000
+Sample Testcases :
+INPUT
+a1b10
+OUTPUT
+a1bbbbbbbbbb
+
+9.	Let P represent Paper, R represent Rock and S represent Scissors. Given 2 out of the 3 determine which one wins. If its a draw print 'D'.
+Sample Testcase :
+INPUT
+R P
+OUTPUT
+P
+import java.util.Scanner;
+
+public class striprac{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        char str1=sc.next().charAt(0);
+        char str2=sc.next().charAt(0);
+        if(str1=='R'&&str2=='P'){
+            System.out.println('P');
+
+        }
+        else if(str1=='S'&&str1=='R'){
+            System.out.println('R');
+        }
+        else{
+            System.out.println('S');
+
+        }
+
+        
+    }
+}
