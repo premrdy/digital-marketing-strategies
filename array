@@ -1,0 +1,259 @@
+Arrays
+1. Given a number N and an array of N elements, find the sum of the maximum elements 
+obtained by considering all consecutive pairs of adjacent elements.
+Input Size : N <= 100000
+Sample Testcase :
+INPUT
+5
+1 2 3 4 5
+OUTPUT
+14
+
+import java.util.Scanner;
+
+public class arrayprac {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int N=sc.nextInt();
+        int a[]=new int[N];
+        int sum=0;
+        for(int i=0;i<a.length;i++){
+            a[i]=sc.nextInt();
+            
+             
+        }
+        int max=0;
+        for(int i=0;i<a.length-1;i++){
+            max=Math.max(a[i], a[i+1]);
+            sum=sum+max;
+            }
+        
+        System.out.println(sum);
+    }
+    
+}
+2. Given a number N and an array of N elements,sort the array in increasing order and print 
+the original indices of the elements present in sorted array.
+Input Size : N <= 100000
+Sample Testcase :
+INPUT
+5
+5 4 3 2 1
+OUTPUT
+5 4 3 2 1
+
+3. Given an value 'M' follwed by array of M elements in which the elements would have 
+been rotated for certain 'N' times from the intial array representation where all elements 
+are arranged in ascending order.Print the 'N' or print -1 if there is no rotation made or 
+cannot be determined.Note: 1<=N<=length of the given array.Sample Testcase :
+INPUT
+5
+15 18 2 3 6 12
+OUTPUT
+2
+4. Given a number N and an array of N elements, find the Bitwise XOR of the array elements.
+Input Size : N <= 100000
+Sample Testcase :
+INPUT
+2
+2 4
+OUTPUT
+6
+mport java.util.Scanner;
+
+public class arrayprac {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        int N=scanner.nextInt();
+        int[] arr = new int[N];
+
+for (int i = 0; i < N; i++) {
+    
+    arr[i] = scanner.nextInt();
+   
+}
+int xor=0;
+for(int i=0;i<N;i++){
+    xor^=arr[i];
+}
+System.out.println(xor);
+
+
+}
+}
+5. Given a string S,count the maximum number of times a character repeated in the string.If 
+no character is repeated print '0'.
+Input Size : 1 <= N <= 100000
+Sample Testcase :
+ NPUT
+codekata
+OUTPUT
+2
+import java.util.Scanner;
+
+public class arrayprac {
+
+        public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+        scanner.close();
+
+        int maxFrequency = findMaxFrequency(str);
+
+        // Output the maximum frequency
+        if (maxFrequency > 1) {
+            System.out.println(maxFrequency);
+        } else {
+            System.out.println("0");
+        }
+    }
+
+    public static int findMaxFrequency(String str) {
+        int[] charFreq = new int[26]; // Array to store frequency of each character
+
+        // Iterate through the string to count character frequencies
+        for (char ch : str.toCharArray()) {
+            if (ch >= 'a' && ch <= 'z') { // Check if the character is a lowercase alphabet
+                int index=ch-'a';
+                charFreq[index]++; // Increment frequency count for the character
+            }
+            //charfreq=[1,0,1,1,1,1,2,1]
+        }
+
+        int maxFrequency = 0;
+
+        // Find the maximum frequency
+        for (int freq : charFreq) {
+            maxFrequency = Math.max(maxFrequency, freq);
+        }
+
+        return maxFrequency;
+    }
+}
+
+6. Vishal is learning to skate on ice. He's a beginner, so his only mode of transportation is 
+pushing off from a snow drift to the north, east, south or west and sliding until he lands 
+in another snow drift. He has noticed that in this way it's impossible to get from some 
+snow drifts to some other by any sequence of moves. He now wants to heap up some 
+additional snow drifts, so that he can get from any snow drift to any other one. He asked 
+you to find the minimal number of snow drifts that need to be created. We assume that 
+Vishal can only heap up snow drifts at integer coordinates. The first line of input contains 
+a single integer N the number of snow drifts. Each of the following n lines contains two 
+integers xi and yi the coordinates of the i-th snow drift. Note that the north direction 
+coinсides with the direction of Oy axis, so the east direction coinсides with the direction 
+of the Ox axis. All snow drift's locations are distinct.
+Input Size : 1 <= N,Xi,Yi <= 1000
+Sample Testcase :
+INPUT
+2
+2 1
+1 2
+OUTPUT
+1
+7. Given an array, find the absolute minimum difference between any two elements in the 
+array.
+Input Size : N <= 1000000(complexity O(n) or O(nlogn))
+Sample Testcase :
+INPUT
+5
+0 2 3 4 5
+OUTPUT
+1
+8. Given 2 strings and a number K, check whether they differ exactly by K characters.
+Input Size : |s| <= 100000(complexity O(nlogn) or O(n))
+Sample Testcase :
+INPUT
+codekata codeguvi 4
+OUTPUT
+yes
+9. Given an array A of N elements, count the number of distinct pairs (i,j) such that i < j and 
+A[i] < A[j].If no such pairs can be made print -1
+Sample Testcase :
+ NPUT
+5
+1 2 3 4 5
+OUTPUT
+10
+10. Given 2 numbers N,X and an array of N elements, check if there exists any 2 numbers in 
+the array with sum equal to X.If found print 'yes' otherwise print 'no'
+Input Size : N,X <= 100000
+Sample Testcase :
+INPUT
+4 4
+2 2 0 0
+OUTPUT
+yes
+11. Given a range (i.e) two numbers L and R count the number of perfect squares within the 
+range (inclusive of L and R).If no perfect square exists within the range print '-1'.
+Input Size : L <= R <= 100000(complexity O(n))
+Sample Testcase :
+INPUT
+2 10
+OUTPUT
+2
+12. Given 2 numbers N,K and an array of N elements, print the number(s) that has been 
+repeated K times.Print them in ascending order if there are more than one number to be 
+printed.If no element satisfies the pattern then print -1
+Input Size : N,K <= 100000
+Sample Testcase :
+INPUT
+5 2
+1 2 4 1 2
+OUTPUT
+1 2
+13. Given a string S consisting of only '(' and ')', print 'yes' if it is balanced otherwise print 'no'.
+Sample Testcase :
+INPUT
+(())
+OUTPUT
+yes
+ 14. You are given with string of words,we have to arrange them in reverse saturated 
+order.
+Input Description:
+You are given a string ‘s’.
+Output Description:
+Print the reverse saturated order
+Sample Input :
+I am kohli fan
+Sample Output :
+I ma ilhok naf
+14.Given an array arr[] and a number K where K is smaller than the size of array, the 
+task is to find the Kth smallest element in the given array. It is given that all array 
+elements are NOT distinct.
+Constraints:
+1 <= T <= 100
+1 <= N <= 105
+1 <= arr[i] <= 105
+1 <= K <= N
+Input Description:
+The first line of input contains an integer T, denoting the number of test cases. Then 
+T test cases follow. Each test case consists of three lines. First line of each test case 
+contains an integer N denoting size of the array. Second line contains N space 
+separated integer denoting elements of the array. Third line of the test case contains 
+an integer K.
+Output Description:
+Corresponding to each test case, print the desired output in a new line.
+Sample Input :
+2
+6
+7 10 4 3 3 4 
+3
+5
+7 10 4 15 15
+4
+
+ Sample Output :
+7
+15
+15.Given a number N and K followed by N elements and K elements. Now insert the given K 
+elements one by one into the array and print the maximum in the array after each 
+insertion .
+Input Size : K <= N <= 10000(read about priority queues and implement)
+Sample Testcase :
+INPUT
+5 2
+1 2 3 4 5
+5 4
+OUTPUT
+5 5
