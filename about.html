@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    
     <style>
-        /* Reset and global styles */
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: rgb(196, 189, 189);
+        /* Reset styles */
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
         }
 
@@ -25,14 +22,14 @@
         }
 
         .container {
-            max-width: 1200px;
+            width: 80%;
             margin: 0 auto;
-            padding: 0 20px;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
 
         nav ul li {
@@ -52,75 +49,92 @@
             color: #ffcc00;
         }
 
-        /* Content section styles */
-        .content {
-            padding-top: 100px;
-            padding-bottom: 50px;
+        /* Main content styles */
+        main {
+            padding: 50px 0;
+            background-color: #f9f9f9;
             text-align: center;
-            max-width: 800px;
+        }
+
+        .main-content {
+            width: 80%;
             margin: 0 auto;
         }
 
-        .content h2 {
+        .main-content h2 {
             font-size: 2.5em;
             margin-bottom: 30px;
+            color: #333;
         }
 
-        .content p {
-            margin-bottom: 30px;
+        .main-content p {
             font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
         }
 
         /* Feature section styles */
         .features {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            padding: 50px 0;
+            background-color: #fff;
         }
 
         .feature {
-            flex: 1;
-            margin: 20px;
+            width: 30%;
             padding: 20px;
-            background-color: rgb(172, 65, 214);
-            border-radius: 10px;
+            margin-bottom: 30px;
+            background-color: #f5f5f5;
+            text-align: left;
+            border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-            width: calc(25% - 40px);
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
         }
 
         .feature h3 {
-            font-size: 1.5em;
             color: #333;
-            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
 
         .feature p {
-            color: #fff;
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
         }
 
-        /* Button styles */
-        .btn {
-            display: inline-block;
+        /* Call to action section */
+        .cta {
+            padding: 50px 0;
             background-color: #333;
             color: #fff;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #333;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1.1em;
             transition: background-color 0.3s;
-            margin-top: 30px;
         }
 
         .btn:hover {
-            background-color: #555;
+            background-color: #e0b800;
         }
 
         /* Footer styles */
@@ -134,6 +148,18 @@
         footer p {
             margin: 0;
             font-size: 0.8em;
+        }
+
+        @media (max-width: 768px) {
+            .feature {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .feature {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -154,44 +180,44 @@
         </div>
     </header>
 
-    <section class="content">
-        <div class="container">
+    <main>
+        <div class="main-content">
             <h2>Who We Are</h2>
             <p>We are Digital Marketing Strategies for Startups, a team of dedicated professionals passionate about helping startups thrive in the digital world.</p>
             
             <h2>Our Mission</h2>
             <p>Our mission is to empower startups with innovative digital marketing strategies, helping them reach their target audience effectively and achieve sustainable growth.</p>
         </div>
-    </section>
 
-    <section class="features">
-        <div class="container">
-            <div class="feature">
-                <h3>Expertise</h3>
-                <p>Our team consists of experienced professionals with a deep understanding of digital marketing.</p>
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <h3>Expertise</h3>
+                    <p>Our team consists of experienced professionals with a deep understanding of digital marketing.</p>
+                </div>
+                <div class="feature">
+                    <h3>Tailored Strategies</h3>
+                    <p>We develop customized strategies tailored to your startup's unique needs and goals.</p>
+                </div>
+                <div class="feature">
+                    <h3>Proven Results</h3>
+                    <p>We have a track record of delivering measurable results for our clients, helping them achieve their business objectives.</p>
+                </div>
+                <div class="feature">
+                    <h3>Continuous Support</h3>
+                    <p>We provide ongoing support and guidance to ensure the success of your digital marketing campaigns.</p>
+                </div>
             </div>
-            <div class="feature">
-                <h3>Tailored Strategies</h3>
-                <p>We develop customized strategies tailored to your startup's unique needs and goals.</p>
-            </div>
-            <div class="feature">
-                <h3>Proven Results</h3>
-                <p>We have a track record of delivering measurable results for our clients, helping them achieve their business objectives.</p>
-            </div>
-            <div class="feature">
-                <h3>Continuous Support</h3>
-                <p>We provide ongoing support and guidance to ensure the success of your digital marketing campaigns.</p>
+        </section>
+
+        <div class="cta">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Ready to take your startup to the next level? Contact us today to learn more about our services and how we can help your business succeed.</p>
+                <a href="contact.html" class="btn">Contact Us</a>
             </div>
         </div>
-    </section>
-
-    <section class="content">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>Ready to take your startup to the next level? Contact us today to learn more about our services and how we can help your business succeed.</p>
-            <a href="contact.html" class="btn">Contact Us</a>
-        </div>
-    </section>
+    </main>
 
     <footer>
         <div class="container">
